@@ -13,10 +13,14 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
 
-public class GetMovies {
+public class ImdbApiClient {
 
-    String token = "k_6hpph0up";
+    String token ;
     ObjectMapper mapper = new ObjectMapper();
+
+    public ImdbApiClient(String token) {
+        this.token = token;
+    }
 
     public Response get(String movieName){
 

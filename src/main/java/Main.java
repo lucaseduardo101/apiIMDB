@@ -1,13 +1,13 @@
 import adapters.HTMLGenerator;
 import domain.entities.Response250;
-import domain.usecases.GetMovies;
+import domain.usecases.ImdbApiClient;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
-        GetMovies movie = new GetMovies();
+        ImdbApiClient movie = new ImdbApiClient("k_6hpph0up");
 
         PrintWriter writer = new PrintWriter("/home/lucas/Documentos/index.html");
 
